@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  epic-sound
+
+  Created by Diego Chohfi on 9/2/13.
+  Copyright (c) 2013 Diego Chohfi. All rights reserved.
+*/
+"logout" = "Logout";
+"loading" = "Loading...";
+"epic_sound" = "EpicSound";
+"followers_following" = "%followers% followers / %following% following";
