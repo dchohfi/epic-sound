@@ -44,16 +44,16 @@
 - (IBAction)login:(id)sender {
     SCLoginViewControllerCompletionHandler handler = ^(NSError *error) {
         if (SC_CANCELED(error)) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"You need to login"
-                                                                message:@"Must be logged to use the app."
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"need_login", nil)
+                                                                message:NSLocalizedString(@"must_be_logged", nil)
                                                                delegate:nil
-                                                      cancelButtonTitle:@"Ok"
+                                                      cancelButtonTitle:NSLocalizedString(@"ok", nil)
                                                       otherButtonTitles:nil];
             [alertView show];
         } else if (error) {
             [self dismissViewControllerAnimated:YES
                                      completion:^{
-                                        NSLog(@"Error: %@", [error localizedDescription]); 
+                                         [self showErrorView:error];
                                      }];
         } else {
             [self configureViewForLoggedState];
@@ -71,7 +71,7 @@
     return 110;
 }
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Likes";
+    return NSLocalizedString(@"likes", nil);
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.likes.count;
@@ -129,7 +129,7 @@
 }
 - (void) showErrorView: (NSError *) error {
     WBErrorNoticeView *errorView = [WBErrorNoticeView errorNoticeInView:self.view
-                                                                  title:@"Ops, we got a problem :("
+                                                                  title:NSLocalizedString(@"error", nil)
                                                                 message:[error localizedDescription]];
     [errorView show];
 }

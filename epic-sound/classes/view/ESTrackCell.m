@@ -78,7 +78,13 @@
     
     [[UIColor lightGrayColor] set];
     currentY += titleSize.height;
-    NSString *stats = [NSString stringWithFormat:@"Plays %i | Comments %i | Favs %i", self.track.playbackCount, self.track.commentCount, self.track.favoritingsCount];
+    NSString *stats = NSLocalizedString(@"track_stats", nil);
+    stats = [stats stringByReplacingOccurrencesOfString:@"%plays%"
+                                             withString:[NSString stringWithFormat:@"%i", self.track.playbackCount]];
+    stats = [stats stringByReplacingOccurrencesOfString:@"%comments%"
+                                             withString:[NSString stringWithFormat:@"%i", self.track.commentCount]];
+    stats = [stats stringByReplacingOccurrencesOfString:@"%favs%"
+                                             withString:[NSString stringWithFormat:@"%i", self.track.favoritingsCount]];
     [stats drawAtPoint:CGPointMake(55, currentY)
               forWidth:265
               withFont:smallFont

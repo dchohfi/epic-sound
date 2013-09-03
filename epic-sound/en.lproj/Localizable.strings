@@ -9,3 +9,9 @@
 "loading" = "Loading...";
 "epic_sound" = "EpicSound";
 "followers_following" = "%followers% followers / %following% following";
+"track_stats" = "Plays %plays% | Comments %comments% | Favs %favs%";
+"error" = "Ops, we got a problem :(";
+"likes" = "Likes";
+"need_login" = "You need to login";
+"must_be_logged" = "Must be logged to use the app.";
+"ok" = "Ok";
