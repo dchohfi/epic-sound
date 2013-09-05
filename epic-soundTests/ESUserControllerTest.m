@@ -79,6 +79,50 @@
         }];
     }];
 }
+- (void) testShouldCallErrorBlockForBadResponseOnUserEndPoint {
+    [self runTestWithBlock:^{
+        [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+            return YES;
+        } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+            return [OHHTTPStubsResponse responseWithError:[NSError errorWithDomain:NSURLErrorDomain
+                                                                              code:kCFURLErrorNotConnectedToInternet
+                                                                          userInfo:nil]];
+        }];
+        
+        [[ESUserController userController] getUserData:^(ESUser *user) {
+            [self blockTestCompletedWithBlock:^{
+                STFail(@"Should not come to the success block when no connection");
+            }];
+        } failure:^(NSError *error) {
+            [self blockTestCompletedWithBlock:^{
+                STAssertEqualObjects(@"The Internet connection appears to be offline.", [error localizedDescription], @"The  error message when no connection should be the same");
+                STAssertNotNil(error, @"Should return an error when no connection is available");
+            }];
+        }];
+    }];
+}
+- (void) testShouldCallErrorBlockForBadResponseOnLikesEndPoint {
+    [self runTestWithBlock:^{
+        [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+            return YES;
+        } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+            return [OHHTTPStubsResponse responseWithError:[NSError errorWithDomain:NSURLErrorDomain
+                                                                              code:kCFURLErrorNotConnectedToInternet
+                                                                          userInfo:nil]];
+        }];
+        
+        [[ESUserController userController] getUserLikes:^(NSArray *likes) {
+            [self blockTestCompletedWithBlock:^{
+                STFail(@"Should not come to the success block when no connection");
+            }];
+        } failure:^(NSError *error) {
+            [self blockTestCompletedWithBlock:^{
+                STAssertEqualObjects(@"The Internet connection appears to be offline.", [error localizedDescription], @"The  error message when no connection should be the same");
+                STAssertNotNil(error, @"Should return an error when no connection is available");
+            }];
+        }];
+    }];
+}
 - (void)tearDown {
     [OHHTTPStubs removeAllRequestHandlers];
 }
