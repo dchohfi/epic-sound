@@ -38,7 +38,7 @@
     STAssertEqualObjects([NSURL URLWithString:@"http://soundcloud.com/user2835985/munching-at-tiannas-house"], track.permalinkUrl, @"Should be able to parse permalink_url correctly");
     STAssertEqualObjects([NSURL URLWithString:@"http://w1.sndcdn.com/fxguEjG4ax6B_m.png"], track.waveformUrl, @"Should be able to parse waveform_url correctly");
     STAssertEqualObjects([NSURL URLWithString:@"http://a1.sndcdn.com/images/default_avatar_large.png?142a848"], track.artworkUrl, @"Shoulg get avatar from user when no artwork on track");
-    STAssertEqualObjects([NSURL URLWithString:@"soundcloud://tracks:13158665"], track.soundCloudURL, @"Should be able to create soundCloudUrl correcly");
+    STAssertEqualObjects([NSURL URLWithString:@"soundcloud:tracks:13158665"], track.soundCloudURL, @"Should be able to create soundCloudUrl correcly");
     STAssertEquals(0, track.favoritingsCount, @"Should be able to parse favoritings_count");
     STAssertEquals(0, track.playbackCount, @"Should be able to parse playback_count");
     STAssertEquals(0, track.commentCount, @"Should be able to parse comment_count");
