@@ -11,6 +11,7 @@
 		20BE74ED17D86EFA0052D912 /* bad_user.json in Resources */ = {isa = PBXBuildFile; fileRef = 20BE74EC17D86EFA0052D912 /* bad_user.json */; };
 		20BE74EE17D86F900052D912 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD06A317D498D500B3DD96 /* AddressBook.framework */; };
 		20BE74EF17D86F900052D912 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD06A417D498D500B3DD96 /* AddressBookUI.framework */; };
+		20BE74F117D8704E0052D912 /* bad_track.json in Resources */ = {isa = PBXBuildFile; fileRef = 20BE74F017D8704E0052D912 /* bad_track.json */; };
 		20FD066917D4921800B3DD96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD066817D4921800B3DD96 /* UIKit.framework */; };
 		20FD066B17D4921800B3DD96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD066A17D4921800B3DD96 /* Foundation.framework */; };
 		20FD066D17D4921800B3DD96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD066C17D4921800B3DD96 /* CoreGraphics.framework */; };
@@ -63,6 +64,7 @@
 		20BE74E917D86CD10052D912 /* ESUserControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESUserControllerTest.h; sourceTree = "<group>"; };
 		20BE74EA17D86CD10052D912 /* ESUserControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESUserControllerTest.m; sourceTree = "<group>"; };
 		20BE74EC17D86EFA0052D912 /* bad_user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bad_user.json; sourceTree = "<group>"; };
+		20BE74F017D8704E0052D912 /* bad_track.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bad_track.json; sourceTree = "<group>"; };
 		20FD066517D4921800B3DD96 /* epic-sound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "epic-sound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FD066817D4921800B3DD96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20FD066A17D4921800B3DD96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -242,6 +244,7 @@
 				20FD06C817D500C200B3DD96 /* track.json */,
 				20FD06CA17D508C300B3DD96 /* user.json */,
 				20BE74EC17D86EFA0052D912 /* bad_user.json */,
+				20BE74F017D8704E0052D912 /* bad_track.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				20FD06C917D500C200B3DD96 /* track.json in Resources */,
 				20FD06CB17D508C300B3DD96 /* user.json in Resources */,
 				20BE74ED17D86EFA0052D912 /* bad_user.json in Resources */,
+				20BE74F117D8704E0052D912 /* bad_track.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

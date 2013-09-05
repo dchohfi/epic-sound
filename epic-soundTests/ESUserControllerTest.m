@@ -36,25 +36,50 @@
 }
 
 - (void) testShouldCallErrorBlockOnUserDataForInvalidJsonResponse {
-    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
-        STAssertEqualObjects([NSURL URLWithString:@"https://api.soundcloud.com/me.json"], request.URL, @"Should call the /me endpoint on soundcloud api");
-        return YES;
-    } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
-        return [OHHTTPStubsResponse responseWithFile:@"bad_user.json"
-                                         contentType:@"text/json"
-                                        responseTime:1.0];
-    }];
-    
-    
-    [[ESUserController userController] getUserData:^(ESUser *user) {
-        [self blockTestCompletedWithBlock:^{
-            STFail(@"Should not come to the success block for an invalid parsed response");
+    [self runTestWithBlock:^{
+        [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+            return YES;
+        } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+            return [OHHTTPStubsResponse responseWithFile:@"bad_user.json"
+                                             contentType:@"text/json"
+                                            responseTime:1.0];
         }];
-    } failure:^(NSError *error) {
-        [self blockTestCompletedWithBlock:^{
-            STAssertNotNil(error, @"Should return an error for invalid response");
+        
+        
+        [[ESUserController userController] getUserData:^(ESUser *user) {
+            [self blockTestCompletedWithBlock:^{
+                STFail(@"Should not come to the success block for an invalid parsed response");
+            }];
+        } failure:^(NSError *error) {
+            [self blockTestCompletedWithBlock:^{
+                STAssertNotNil(error, @"Should return an error for invalid response");
+            }];
         }];
     }];
 }
-
+- (void) testShouldCallErrorBlockOnUserLikesForInvalidJsonResponse {
+    [self runTestWithBlock:^{
+        [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+            return YES;
+        } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+            return [OHHTTPStubsResponse responseWithFile:@"bad_track.json"
+                                             contentType:@"text/json"
+                                            responseTime:1.0];
+        }];
+        
+        
+        [[ESUserController userController] getUserLikes:^(NSArray *likes) {
+            [self blockTestCompletedWithBlock:^{
+                STFail(@"Should not come to the success block for an invalid parsed response");
+            }];
+        } failure:^(NSError *error) {
+            [self blockTestCompletedWithBlock:^{
+                STAssertNotNil(error, @"Should return an error for invalid response");
+            }];
+        }];
+    }];
+}
+- (void)tearDown {
+    [OHHTTPStubs removeAllRequestHandlers];
+}
 @end
