@@ -123,6 +123,48 @@
         }];
     }];
 }
+- (void) testShouldReturnValidUserForAValidRequest {
+    [self runTestWithBlock:^{
+        [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+            return YES;
+        } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+            return [OHHTTPStubsResponse responseWithFile:@"user.json"
+                                             contentType:@"text/json"
+                                            responseTime:1.0];
+        }];
+        
+        [[ESUserController userController] getUserData:^(ESUser *user) {
+            [self blockTestCompletedWithBlock:^{
+                STAssertNotNil(user, @"Should be able to return a valid user");
+            }];
+        } failure:^(NSError *error) {
+            [self blockTestCompletedWithBlock:^{
+                STFail(@"Should not come to the success block when no connection");
+            }];
+        }];
+    }];
+}
+- (void) testShouldReturnValidLikesForValidResponse {
+    [self runTestWithBlock:^{
+        [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest *request) {
+            return YES;
+        } withStubResponse:^OHHTTPStubsResponse *(NSURLRequest *request) {
+            return [OHHTTPStubsResponse responseWithFile:@"tracks.json"
+                                             contentType:@"text/json"
+                                            responseTime:1.0];
+        }];
+        
+        [[ESUserController userController] getUserLikes:^(NSArray *likes) {
+            [self blockTestCompletedWithBlock:^{
+                STAssertNotNil(likes, @"Should be able to return valid likes");
+            }];
+        } failure:^(NSError *error) {
+            [self blockTestCompletedWithBlock:^{
+                STFail(@"Should not come to the success block when no connection");
+            }];
+        }];
+    }];
+}
 - (void)tearDown {
     [OHHTTPStubs removeAllRequestHandlers];
 }
