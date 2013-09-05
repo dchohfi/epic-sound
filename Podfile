@@ -10,3 +10,8 @@ pod 'UIActivityIndicator-for-SDWebImage', '~> 1.0.0'
 pod 'SVPullToRefresh', '~> 0.4.1'
 pod 'FormatterKit/TimeIntervalFormatter', '~> 1.2.1'
 pod 'NoticeView', '~> 3.0.7'
+
+target "epic-soundTests" do
+    pod 'OHHTTPStubs', '~> 2.0.0'
+    pod 'OCMock', '~> 2.2'
+end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20BE74EB17D86CD10052D912 /* ESUserControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BE74EA17D86CD10052D912 /* ESUserControllerTest.m */; };
+		20BE74ED17D86EFA0052D912 /* bad_user.json in Resources */ = {isa = PBXBuildFile; fileRef = 20BE74EC17D86EFA0052D912 /* bad_user.json */; };
+		20BE74EE17D86F900052D912 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD06A317D498D500B3DD96 /* AddressBook.framework */; };
+		20BE74EF17D86F900052D912 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD06A417D498D500B3DD96 /* AddressBookUI.framework */; };
 		20FD066917D4921800B3DD96 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD066817D4921800B3DD96 /* UIKit.framework */; };
 		20FD066B17D4921800B3DD96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD066A17D4921800B3DD96 /* Foundation.framework */; };
 		20FD066D17D4921800B3DD96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20FD066C17D4921800B3DD96 /* CoreGraphics.framework */; };
@@ -41,6 +45,7 @@
 		20FD06D517D52CEC00B3DD96 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD06D417D52CEC00B3DD96 /* UIColor+Additions.m */; };
 		20FD06D817D532B000B3DD96 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD06D717D532B000B3DD96 /* UIImage+Additions.m */; };
 		20FD06DB17D5E5F600B3DD96 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FD06DA17D5E5F600B3DD96 /* UIView+Additions.m */; };
+		480C8FDF2DAE4813A13FAC75 /* libPods-epic-soundTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1721C040F7445929714666F /* libPods-epic-soundTests.a */; };
 		96CBF62B7CFA497787781F68 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0D76405F6F43649A3F043C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20BE74E917D86CD10052D912 /* ESUserControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESUserControllerTest.h; sourceTree = "<group>"; };
+		20BE74EA17D86CD10052D912 /* ESUserControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESUserControllerTest.m; sourceTree = "<group>"; };
+		20BE74EC17D86EFA0052D912 /* bad_user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bad_user.json; sourceTree = "<group>"; };
 		20FD066517D4921800B3DD96 /* epic-sound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "epic-sound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FD066817D4921800B3DD96 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20FD066A17D4921800B3DD96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +116,8 @@
 		20FD06DA17D5E5F600B3DD96 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Additions.m"; path = "classes/categories/UIView+Additions.m"; sourceTree = "<group>"; };
 		7B0D76405F6F43649A3F043C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B1FB396CB347188AC8CBC7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D1721C040F7445929714666F /* libPods-epic-soundTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-epic-soundTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5DFE30C946F421C8DC8DB82 /* Pods-epic-soundTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-epic-soundTests.xcconfig"; path = "Pods/Pods-epic-soundTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,9 +139,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BE74EE17D86F900052D912 /* AddressBook.framework in Frameworks */,
+				20BE74EF17D86F900052D912 /* AddressBookUI.framework in Frameworks */,
 				20FD068717D4921800B3DD96 /* SenTestingKit.framework in Frameworks */,
 				20FD068817D4921800B3DD96 /* UIKit.framework in Frameworks */,
 				20FD068917D4921800B3DD96 /* Foundation.framework in Frameworks */,
+				480C8FDF2DAE4813A13FAC75 /* libPods-epic-soundTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +159,7 @@
 				20FD066717D4921800B3DD96 /* Frameworks */,
 				20FD066617D4921800B3DD96 /* Products */,
 				96B1FB396CB347188AC8CBC7 /* Pods.xcconfig */,
+				D5DFE30C946F421C8DC8DB82 /* Pods-epic-soundTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +183,7 @@
 				20FD066C17D4921800B3DD96 /* CoreGraphics.framework */,
 				20FD068617D4921800B3DD96 /* SenTestingKit.framework */,
 				7B0D76405F6F43649A3F043C /* libPods.a */,
+				D1721C040F7445929714666F /* libPods-epic-soundTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -212,6 +227,8 @@
 				20FD06C617D500B400B3DD96 /* ESTrackParserTest.m */,
 				20FD06CC17D508D400B3DD96 /* ESUserParserTest.h */,
 				20FD06CD17D508D500B3DD96 /* ESUserParserTest.m */,
+				20BE74E917D86CD10052D912 /* ESUserControllerTest.h */,
+				20BE74EA17D86CD10052D912 /* ESUserControllerTest.m */,
 				20FD068D17D4921800B3DD96 /* Supporting Files */,
 			);
 			path = "epic-soundTests";
@@ -224,6 +241,7 @@
 				20FD068F17D4921800B3DD96 /* InfoPlist.strings */,
 				20FD06C817D500C200B3DD96 /* track.json */,
 				20FD06CA17D508C300B3DD96 /* user.json */,
+				20BE74EC17D86EFA0052D912 /* bad_user.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -327,10 +345,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20FD069A17D4921800B3DD96 /* Build configuration list for PBXNativeTarget "epic-soundTests" */;
 			buildPhases = (
+				A582CCDA48144433A9977887 /* Check Pods Manifest.lock */,
 				20FD068017D4921800B3DD96 /* Sources */,
 				20FD068117D4921800B3DD96 /* Frameworks */,
 				20FD068217D4921800B3DD96 /* Resources */,
 				20FD068317D4921800B3DD96 /* ShellScript */,
+				9EAA0B6342E849CFA1A29D7C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -393,6 +413,7 @@
 				20FD069117D4921800B3DD96 /* InfoPlist.strings in Resources */,
 				20FD06C917D500C200B3DD96 /* track.json in Resources */,
 				20FD06CB17D508C300B3DD96 /* user.json in Resources */,
+				20BE74ED17D86EFA0052D912 /* bad_user.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +461,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
+		9EAA0B6342E849CFA1A29D7C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-epic-soundTests-resources.sh\"\n";
+		};
+		A582CCDA48144433A9977887 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -468,6 +517,7 @@
 			files = (
 				20FD06C717D500B400B3DD96 /* ESTrackParserTest.m in Sources */,
 				20FD06CE17D508D500B3DD96 /* ESUserParserTest.m in Sources */,
+				20BE74EB17D86CD10052D912 /* ESUserControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +651,7 @@
 		};
 		20FD069B17D4921800B3DD96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5DFE30C946F421C8DC8DB82 /* Pods-epic-soundTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/epic-sound.app/epic-sound";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -618,6 +669,7 @@
 		};
 		20FD069C17D4921800B3DD96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5DFE30C946F421C8DC8DB82 /* Pods-epic-soundTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/epic-sound.app/epic-sound";
 				FRAMEWORK_SEARCH_PATHS = (
